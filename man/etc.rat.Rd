@@ -3,10 +3,11 @@
 \title{ Simultaneous equivalence to control for ratios of means }
 \description{
 Performs simultaneous equivalence tests and related confidence intervals for
-ratios to control of normal means in a one-way layout.
+ratios to control in a one-way layout.
 }
 \usage{
-etc.rat(formula, data, base = 1, margin.up = NULL, margin.lo = 1/margin.up, method = "var.unequal", FWER = 0.05)
+etc.rat(formula, data, base = 1, margin.up = NULL, margin.lo = 1/margin.up,
+        method = "var.unequal", FWER = 0.05)
 }
 \arguments{
   \item{formula}{ a formula specifying a numerical response and a
@@ -36,11 +37,26 @@ applied for unequal variances (method="var.unequal").
 \value{
 An object of class etc.rat containing:
 \item{estimate}{ a (named) vector of estimated ratios }
-\item{test.stat}{ a (named) vector of the calculated test statistics }
-\item{degr.fr}{ either a single degree of freedom (method="var.equal") or a (named)
-                vector of degrees of freedom (method="var.unequal") }
-\item{crit.value}{ either a single critical value (method="var.equal") or a (named)
-                   vector  of critical values (method="var.unequal") }
+\item{test.stat}{ a (named) vector of the calculated test statistics
+                  (method="var.equal")}
+\item{test.stat.up}{ a (named) vector of the calculated test statistics (up)
+                     (method="var.unequal")}
+\item{test.stat.do}{ a (named) vector of the calculated test statistics (do)
+                     (method="var.unequal")}
+\item{degr.fr}{ a single degree of freedom (method="var.equal") }
+\item{degr.fr.up}{ a (named) vector of degrees of freedom for test statistics (up)
+                   (method="var.unequal") }
+\item{degr.fr.do}{ a (named) vector of degrees of freedom for test statistics (do)
+                   (method="var.unequal") }
+\item{degr.fr.ci}{ a (named) vector of degrees of freedom used for the confidence
+                   intervals (method="var.unequal") }
+\item{crit.value}{ a single critical value (method="var.equal") }
+\item{crit.value.up}{ a (named) vector of critical values for test statistics (up)
+                      (method="var.unequal") }
+\item{crit.value.do}{ a (named) vector of critical values for test statistics (do)
+                      (method="var.unequal") }
+\item{crit.value.ci}{ a (named) vector of critical values for the confidence
+                      intervals (method="var.unequal") }
 \item{p.value}{ a (named) vector of p-values adjusted for multiplicity }
 \item{conf.int}{ a (named) matrix of simultaneous confidence intervals }
 }
@@ -49,8 +65,10 @@ Because related to the TOST method, the confidence intervals have simultaneous c
 probability (1-2alpha). The intervals are "expanded", see Bofinger (1985).
 }
 \references{
-Hothorn, L.A. and Hasler, M. (2007): Proof of hazard and proof of safety in toxicological
-studies using simultaneous confidence intervals for differences and ratios to control
+Hothorn, L.A. and Hasler, M. (submitted): Proof of hazard and proof of safety in toxicological
+studies using simultaneous confidence intervals for differences and ratios to control;
+Bofinger, E. (1985): Expanded confidence intervals, Communications in Statistics - Theory and
+Methods 14 (8), 1849-1864
 }
 \author{ Mario Hasler }
 \seealso{ \code{\link{etc.diff}} }

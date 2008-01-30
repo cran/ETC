@@ -3,10 +3,11 @@
 \title{ Simultaneous equivalence to control for differences of means }
 \description{
 Performs simultaneous equivalence tests and related confidence intervals for
-differences to control of normal means in a one-way layout.
+differences to control in a one-way layout.
 }
 \usage{
-etc.diff(formula, data, base = 1, margin.up = NULL, margin.lo = -margin.up, method = "var.unequal", FWER = 0.05)
+etc.diff(formula, data, base = 1, margin.up = NULL, margin.lo = -margin.up,
+         method = "var.unequal", FWER = 0.05)
 }
 \arguments{
   \item{formula}{ a formula specifying a numerical response and a
@@ -64,10 +65,12 @@ method="var.unequal", and method="non.par") have simultaneous coverage probabili
 (method="Bofinger") have (1-alpha). All intervals are "expanded", see Bofinger (1985).
 }
 \references{
-Hothorn, L.A. and Hasler, M. (2007): Proof of hazard and proof of safety in toxicological
+Hothorn, L.A. and Hasler, M. (submitted): Proof of hazard and proof of safety in toxicological
 studies using simultaneous confidence intervals for differences and ratios to control;
 Bofinger, E. and Bofinger M. (1995): Equivalence with Respect to a Control: Stepwise
-Tests, Journal of the Royal Statistical Society B 57 (4), 721-733
+Tests, Journal of the Royal Statistical Society B 57 (4), 721-733;
+Bofinger, E. (1985): Expanded confidence intervals, Communications in Statistics - Theory and
+Methods 14 (8), 1849-1864
 }
 \author{ Mario Hasler }
 \seealso{ \code{\link{etc.rat}} }
