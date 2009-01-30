@@ -21,16 +21,17 @@ etc.diff(formula, data, base = 1, margin.up = NULL, margin.lo = -margin.up,
                     number of comparisons) for absolute lower margins under the null
                     hypotheses, set to -margin.up by default if not given }
   \item{method}{ a character string:
-                   \item "var.unequal": possibly unequal group variances,
-                   \item "var.equal": equal group variances,
-                   \item "Bofinger": equal group variances and equal sample sizes for the
-                                     non-control groups
-                   \item "non.par": non-normal distributed data }
+    \itemize{
+      \item "var.unequal": possibly unequal group variances,
+      \item "var.equal": equal group variances,
+      \item "Bofinger": equal group variances and equal sample sizes for the non-control
+        groups
+      \item "non.par": non-normally distributed data } }
   \item{FWER}{ a single numeric value specifying the familywise error rate to be
-               controlled }
+               controlled by the simultaneous confidence intervals }
 }
 \details{
-Given several treatment groups and a control in a one-way layout, the object is to
+Having several treatment groups and a control in a one-way layout, the object is to
 simultaneously select those treatments being equivalent to the control. Bonferroni
 adjusted "two one-sided t-tests" (TOST) and related simultaneous confidence intervals
 are used for differences of means of normally distributed data with equal group
@@ -61,16 +62,19 @@ An object of class etc.diff containing:
 \note{
 The confidence intervals related to the TOST method (method="var.equal",
 method="var.unequal", and method="non.par") have simultaneous coverage probability
-(1-2alpha) while the intervals according to Bofinger and Bofinger (1995)
+(1-2alpha), while the intervals according to Bofinger and Bofinger (1995)
 (method="Bofinger") have (1-alpha). All intervals are "expanded", see Bofinger (1985).
 }
 \references{
-Hothorn, L.A. and Hasler, M. (submitted): Proof of hazard and proof of safety in toxicological
-studies using simultaneous confidence intervals for differences and ratios to control;
+Hothorn, L.A. and Hasler, M. (2008): Proof of hazard and proof of safety in
+toxicological studies using simultaneous confidence intervals for differences and
+ratios to control, Journal of Biopharmaceutical Statistics 18, 915-933;
+
 Bofinger, E. and Bofinger M. (1995): Equivalence with Respect to a Control: Stepwise
 Tests, Journal of the Royal Statistical Society B 57 (4), 721-733;
-Bofinger, E. (1985): Expanded confidence intervals, Communications in Statistics - Theory and
-Methods 14 (8), 1849-1864
+
+Bofinger, E. (1985): Expanded confidence intervals, Communications in Statistics - Theory
+and Methods 14 (8), 1849-1864
 }
 \author{ Mario Hasler }
 \seealso{ \code{\link{etc.rat}} }

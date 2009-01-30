@@ -1,7 +1,7 @@
 `etc.diff` <-
-function(formula,data,base=1,margin.up=NULL,margin.lo=-margin.up,method="var.unequal",FWER=0.05) {
+function(formula,data,base=1,margin.up=NULL,margin.lo=-margin.up,
+                     method="var.unequal",FWER=0.05) {
 
-require(mvtnorm)
 
 if (length(formula) != 3) {
   stop("formula mis-specified")
@@ -18,6 +18,7 @@ Treatment <- as.factor(mf[, 2])
 tr.names <- levels(Treatment)
 comp.names <- paste(tr.names[-base], tr.names[base], sep = "-")
 k <- length(comp.names)                                                                         # number of comparisons
+
 if ( is.numeric(margin.up)==FALSE | (length(margin.up)==k)+(length(margin.up)==1)==0 ) {
   stop("margin.up must be a single numeric value or a numeric vector of lenght equal to the number of comparisons")
 }
@@ -33,6 +34,7 @@ if (length(margin.lo)==1) {
 if (any(margin.up<=0) | any(margin.lo>=0)) {
   stop("All components of margin.up (margin.lo) must be positiv (negative)")
 }
+
 method <- match.arg(method, choices = c("Bofinger", "var.equal", "var.unequal", "non.par"))
 
 tr.mean   <- tapply(Response,Treatment,mean)
@@ -152,5 +154,8 @@ names(value$p.value) <- comp.names
 colnames(value$conf.int) <- comp.names
 class(value) <- "etc.diff"
 
-return(value) }
+return(value)
+
+
+}
 

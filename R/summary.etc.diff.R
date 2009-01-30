@@ -1,6 +1,7 @@
 `summary.etc.diff` <-
 function(object,digits=4,...) {
 
+
 cat("", "\n")
 cat("Alternative hypotheses: differences to control within the margins", object$margin.lo, "and", object$margin.up,
     "\n")
@@ -37,6 +38,7 @@ if (object$method!="non.par")
 
 print(out, digits=digits)
 cat("", "\n")
+
 
 }
 

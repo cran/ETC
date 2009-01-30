@@ -1,6 +1,7 @@
 `summary.etc.rat` <-
 function(object,digits=4,...) {
 
+
 cat("", "\n")
 cat("Alternative hypotheses: ratios to control within the margins", object$margin.lo, "and", object$margin.up,
     "\n")
@@ -52,6 +53,7 @@ if (object$method=="var.unequal") {
 
 print(out, digits=digits)
 cat("", "\n")
+
 
 }
 

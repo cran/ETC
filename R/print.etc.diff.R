@@ -1,6 +1,7 @@
 `print.etc.diff` <-
 function(x,digits=4,...) {
 
+
 cat("", "\n")
 cat("Alternative hypotheses: differences to control within the margins", x$margin.lo, "and", x$margin.up,
     "\n")
@@ -12,6 +13,7 @@ cat("", "\n")
 print(out, digits=digits)
 cat("", "\n")
 invisible(x)
+
 
 }
 

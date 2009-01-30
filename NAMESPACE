@@ -1,0 +1,9 @@
+export(etc.diff, etc.rat)
+
+import(mvtnorm)
+
+S3method(print, etc.diff)
+S3method(summary, etc.diff)
+
+S3method(print, etc.rat)
+S3method(summary, etc.rat)

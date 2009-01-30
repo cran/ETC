@@ -1,5 +1,7 @@
 `etc.rat` <-
-function(formula,data,base=1,margin.up=NULL,margin.lo=1/margin.up,method="var.unequal",FWER=0.05) {
+function(formula,data,base=1,margin.up=NULL,margin.lo=1/margin.up,
+                    method="var.unequal",FWER=0.05) {
+
 
 if (length(formula) != 3) {
   stop("formula mis-specified")
@@ -16,6 +18,7 @@ Treatment <- as.factor(mf[, 2])
 tr.names <- levels(Treatment)
 comp.names <- paste(tr.names[-base], tr.names[base], sep = "/")
 k <- length(comp.names)                                                                         # number of comparisons
+
 if ( is.numeric(margin.up)==FALSE | (length(margin.up)==k)+(length(margin.up)==1)==0 ) {
   stop("margin.up must be a single numeric value or a numeric vector of lenght equal to the number of comparisons")
 }
@@ -118,5 +121,8 @@ if (is.numeric(value$conf.int)) colnames(value$conf.int) <- comp.names
 names(value$margin.up) <- comp.names; names(value$margin.lo) <- comp.names
 class(value) <- "etc.rat"
 
-return(value) }
+return(value)
+
+
+}
 

@@ -1,6 +1,7 @@
 `print.etc.rat` <-
 function(x,digits=4,...) {
 
+
 cat("", "\n")
 cat("Alternative hypotheses: ratios to control within the margins", x$margin.lo, "and", x$margin.up,
     "\n")
@@ -22,6 +23,7 @@ cat("", "\n")
 print(out, digits=digits)
 cat("", "\n")
 invisible(x)
+
 
 }
 

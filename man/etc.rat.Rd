@@ -21,13 +21,14 @@ etc.rat(formula, data, base = 1, margin.up = NULL, margin.lo = 1/margin.up,
                     number of comparisons) for relative lower margins under the null
                     hypotheses, set to 1/margin.up by default if not given }
   \item{method}{ a character string:
-                   \item "var.unequal": possibly unequal group variances,
-                   \item "var.equal": equal group variances }
+    \itemize{
+      \item "var.unequal": possibly unequal group variances,
+      \item "var.equal": equal group variances } }
   \item{FWER}{ a single numeric value specifying the familywise error rate to be
-               controlled }
+               controlled by the simultaneous confidence intervals }
 }
 \details{
-Given several treatment groups and a control, the object is to simultaneously select
+Having several treatment groups and a control, the object is to simultaneously select
 those treatments being equivalent to the control. Bonferroni adjusted "two one-sided
 t-tests" (TOST) and related simultaneous confidence intervals are used for ratios
 of means of normally distributed data with equal group variances (method="var.equal").
@@ -65,10 +66,12 @@ Because related to the TOST method, the confidence intervals have simultaneous c
 probability (1-2alpha). The intervals are "expanded", see Bofinger (1985).
 }
 \references{
-Hothorn, L.A. and Hasler, M. (submitted): Proof of hazard and proof of safety in toxicological
-studies using simultaneous confidence intervals for differences and ratios to control;
-Bofinger, E. (1985): Expanded confidence intervals, Communications in Statistics - Theory and
-Methods 14 (8), 1849-1864
+Hothorn, L.A. and Hasler, M. (2008): Proof of hazard and proof of safety in
+toxicological studies using simultaneous confidence intervals for differences and
+ratios to control, Journal of Biopharmaceutical Statistics 18, 915-933;
+
+Bofinger, E. (1985): Expanded confidence intervals, Communications in Statistics - Theory
+and Methods 14 (8), 1849-1864
 }
 \author{ Mario Hasler }
 \seealso{ \code{\link{etc.diff}} }
