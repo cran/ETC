@@ -3,23 +3,24 @@
 \alias{ETC}
 \docType{package}
 \title{
-Equivalence to control
+Equivalence to Control
 }
 \description{
-The package allows selecting those treatments of a one-way layout being
-equivalent to a control. Bonferroni adjusted "two one-sided t-tests"
-(TOST) and related simultaneous confidence intervals are given for both
-differences or ratios of means of normally distributed data. For the
-case of equal variances and balanced sample sizes for the treatment
-groups, the single-step procedure of Bofinger and Bofinger (1995) can
-be chosen. For non-normal data, the Wilcoxon test is applied.
+Treatments of a one-way layout, being equivalent to a control, can be 
+selected with this package. Bonferroni adjusted "two one-sided t-tests" 
+(TOST) and related simultaneous confidence intervals are given for both 
+differences or ratios of means of normally distributed data. For the 
+case of equal variances and balanced sample sizes for the treatment 
+groups, the single-step procedure of Bofinger and Bofinger (1995) 
+<doi:10.1111/j.2517-6161.1995.tb02058.x> can be chosen. For non-normal 
+data, the Wilcoxon test is applied.
 }
 \details{
 \tabular{ll}{
 Package: \tab ETC\cr
 Type: \tab Package\cr
-Version: \tab 1.3\cr
-Date: \tab 2009-01-30\cr
+Version: \tab 1.5\cr
+Date: \tab 2022-03-02\cr
 License: \tab GPL\cr
 LazyLoad: \tab yes\cr
 }

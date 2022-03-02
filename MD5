@@ -1,0 +1,17 @@
+55504fbb388a1fadf926932bb12dccc7 *DESCRIPTION
+852166d9b7a00f4f595a36ec4f7d8df1 *NAMESPACE
+9a3b4bba2f8744340f2f4b423e6a130a *R/etc.diff.R
+601a5d4b98cc9d5b6501f8cbb023b0bd *R/etc.rat.R
+9b072b9cf77f6d42ef04b383e5af150d *R/print.etc.diff.R
+943d56ebcda188b9e1a80955a8c6b202 *R/print.etc.rat.R
+f280fe216036883af87c3cf4817a7213 *R/summary.etc.diff.R
+a6c00a1e38a98e2f2d232b1bd692667c *R/summary.etc.rat.R
+dbcfa7430c1edce462e2438e0d420e81 *data/BW.rda
+0011ee1222f30d2c3bd7fc9dcdae272d *man/BW.Rd
+ad02ed919247e9b8cedd7d80ee2ba974 *man/ETC-package.Rd
+777e4015f57607ab4b1a0b72e08d51f9 *man/etc.diff.Rd
+f9d28614178fd157f5168ca2dd2701f2 *man/etc.rat.Rd
+12d56be13d74d2987a4da98aeb40e389 *man/print.etc.diff.Rd
+21fcf1217eeae4c43c53d97eb3f35739 *man/print.etc.rat.Rd
+8e231318243b139cf38cb8369d00a362 *man/summary.etc.diff.Rd
+5dac63adc7a21be89063b804d55092da *man/summary.etc.rat.Rd
